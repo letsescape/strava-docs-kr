@@ -1,13 +1,10 @@
 import React from "react";
-import Header from "../component/Header";
 import Footer from "../component/Footer";
 import Button from "../component/Button";
 
 export default function Intro() {
     return (
         <>
-            <Header/>
-
             <section className="section section-strava-api container">
                 <h1>{INTRO_TITLE}</h1>
 
