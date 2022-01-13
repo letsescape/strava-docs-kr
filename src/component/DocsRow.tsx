@@ -5,32 +5,28 @@ export interface DocsRowType {
 }
 
 interface MDProps {
-    node: any;
-    inline: any;
-    className: any;
-    children: any;
+    node?: any;
 }
 
 export default function DocsRow({content}: DocsRowType) {
     return (
         <ReactMarkdown
             children={content}
+            className="row"
             components={{
-                code({node, inline, className, children, ...props}: MDProps) {
-                    console.log(props);
-                    const match = /language-(\w+)/.exec(className || '');
-                    console.log(match);
-                    return !inline && match ? (
-                        <div>
-                            cc
-                            {String(children).replace(/\n$/, '')}
+                h1: ({node}: MDProps) => {
+                    const {value} = node.children[0];
+                    const target = value.match(/#/);
+                    console.log(target);
+                    return (
+                        <div id="">
+                            <h1>{value}</h1>
                         </div>
-                    ) : (
-                        <code className={className} {...props}>
-                            asd
-                            {children}
-                        </code>
                     )
+                },
+                em: ({node, ...props}: MDProps) => {
+                    console.log(node);
+                    return <i style={{color: 'red'}} {...props} />
                 }
             }}
 

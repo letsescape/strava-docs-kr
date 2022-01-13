@@ -12,6 +12,10 @@ body, p, a, div, th, td {
     text-shadow: none !important;
 }
 
+div {
+    overflow: hidden;
+}
+
 body {
     min-width: 980px;
     padding-top: 0;
@@ -388,3 +392,4 @@ pre.http-request-line {
     padding-left: 0;
     padding-right: 0;
 }
+
