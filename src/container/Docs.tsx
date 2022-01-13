@@ -1,8 +1,12 @@
+import DocsAside from "../component/DocsAside";
+import DocsContent from "../component/DocsContent";
+import './docs.css';
 
 export default function Docs() {
     return (
-        <>
-            docs
-        </>
+        <main className="reference" role="main">
+            <DocsAside/>
+            <DocsContent/>
+        </main>
     )
 }
