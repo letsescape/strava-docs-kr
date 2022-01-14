@@ -1,36 +1,24 @@
-import ReactMarkdown from "react-markdown";
+import DocsPanel from "./DocsPanel";
 
-export interface DocsRowType {
-    content: string
+interface DocsRowType {
+    contents: string[];
 }
 
-interface MDProps {
-    node?: any;
-}
+export default function DocsRow({contents}: DocsRowType) {
+    const [leftContent, rightContent] = contents;
 
-export default function DocsRow({content}: DocsRowType) {
     return (
-        <ReactMarkdown
-            children={content}
-            className="row"
-            components={{
-                h1: ({node}: MDProps) => {
-                    const {value} = node.children[0];
-                    const target = value.match(/#/);
-                    console.log(target);
-                    return (
-                        <div id="">
-                            <h1>{value}</h1>
-                        </div>
-                    )
-                },
-                em: ({node, ...props}: MDProps) => {
-                    console.log(node);
-                    return <i style={{color: 'red'}} {...props} />
-                }
-            }}
+        <div className="row">
+            <DocsPanel
+                position="left"
+                content={leftContent}
+            />
 
-        />
+            <DocsPanel
+                position="right"
+                content={rightContent}
+            />
+        </div>
     )
 
     // return (
