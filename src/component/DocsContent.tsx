@@ -13,7 +13,7 @@ export default function DocsContent() {
     return (
         <div id="content">
             <div className="container-fluid">
-                <DocsRow contents={[introDocs, '']}/>
+                <DocsRow content={introDocs}/>
             </div>
         </div>
     )

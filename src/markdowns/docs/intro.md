@@ -1,20 +1,20 @@
-:::div{.col-md-6 .left-pane}
+:::docs-panel{#left}
 
-:::
-
-# Strava API v3 
+# Strava API v3
+<!--rehype:style=color:pink;-->
 
 ## API and SDK Reference
 
-You can find general information about the API <a href="/docs">here</a>. All requests to the Strava API require
+You can find general information about the API 
+[here](/docs)
+All requests to the Strava API require
 [authentication](/docs/authentication)
 We have a few standalone pages with additional information about our
 [webhooks](/docs/webhooks),
 [activity uploads](/docs/uploads)
-and [rate limits](/docs/rate-limits).   
-      
-   
-**New to the Strava API? View our [Getting Started Guide](/docs/getting-started).**   
+and [rate limits](/docs/rate-limits).
+
+**New to the Strava API? View our [Getting Started Guide](/docs/getting-started).**
 
 ***
 
@@ -26,4 +26,7 @@ use the Playground, go to
 note, we only support Swagger 2.0. There is a known issue where you can only select one scope at a time. For more
 information, please check the section “client code” at <https://developers.strava.com/docs>.
 
-{/* asd */}
+:::
+
+:::docs-panel{#right}
+:::

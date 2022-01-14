@@ -1,62 +1,34 @@
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkDirective from "remark-directive";
+import remarkDirectiveRehype from "remark-directive-rehype";
+import remarkRehype from "remark-rehype";
+import remarkParse from "remark-parse";
+import remarkAttr from "remark-attr"
+import rehypeAttr from "rehype-attr";
 import DocsPanel from "./DocsPanel";
 
-interface DocsRowType {
-    contents: string[];
+interface DocsPanelType {
+    content: string;
 }
 
-export default function DocsRow({contents}: DocsRowType) {
-    const [leftContent, rightContent] = contents;
-
+export default function DocsRow({content}: DocsPanelType) {
     return (
-        <div className="row">
-            <DocsPanel
-                position="left"
-                content={leftContent}
-            />
-
-            <DocsPanel
-                position="right"
-                content={rightContent}
-            />
-        </div>
+        <ReactMarkdown
+            className="row"
+            remarkPlugins={[
+                remarkGfm,
+                remarkDirective,
+                remarkDirectiveRehype
+            ]}
+            rehypePlugins={[
+                rehypeAttr
+            ]}
+            components={{
+                'docs-panel': DocsPanel
+            }}
+        >
+            {content}
+        </ReactMarkdown>
     )
-
-    // return (
-    //     <div className="row" dangerouslySetInnerHTML={{__html: content}}>
-    //         {/*{content}*/}
-    //         {/*<div className="col-md-6 left-pane">*/}
-    //         {/*    <div id="project">*/}
-    //         {/*        <h1>Strava API v3</h1>*/}
-    //         {/*    </div>*/}
-    //         {/*    <header id="header">*/}
-    //         {/*        <div id="api-_">*/}
-    //         {/*            <h2 id="welcome-to-apidoc">API and SDK Reference</h2>*/}
-    //         {/*            <div className="app-desc">*/}
-    //         {/*                You can find general information about the API <a href="/docs">here</a>.*/}
-    //         {/*                All requests to the Strava API require <a href="/docs/authentication">authentication</a>.*/}
-    //         {/*                We have a few standalone pages with additional information about our <a*/}
-    //         {/*                href="/docs/webhooks">webhooks</a>, <a href="/docs/uploads">activity uploads</a> and <a*/}
-    //         {/*                href="/docs/rate-limits">rate limits</a>. <br/> <br/> <strong>New to the Strava API? View*/}
-    //         {/*                our <a href="/docs/getting-started">Getting Started Guide</a>.</strong> <br/>*/}
-    //         {/*            </div>*/}
-    //         {/*            <hr/>*/}
-    //         {/*            <p className="marked">*/}
-    //         {/*                <p>The <a href="https://developers.strava.com/playground">Swagger*/}
-    //         {/*                    Playground</a> is the easiest way to familiarize yourself with the Strava API by*/}
-    //         {/*                    submitting HTTP requests and observing the responses before you write any client code.*/}
-    //         {/*                    It will show what a response will look like with different endpoints depending on the*/}
-    //         {/*                    authorization scope you receive from your athletes. To use the Playground, go to <a*/}
-    //         {/*                        href="https://www.strava.com/settings/api">https://www.strava.com/settings/api</a> and*/}
-    //         {/*                    change your “Authorization Callback Domain” to developers.strava.com. Please note, we*/}
-    //         {/*                    only support Swagger 2.0. There is a known issue where you can only select one scope at*/}
-    //         {/*                    a time. For more information, please check the section “client code” at <a*/}
-    //         {/*                        href="https://developers.strava.com/docs">https://developers.strava.com/docs</a>.*/}
-    //         {/*                </p>*/}
-    //         {/*            </p>*/}
-    //         {/*        </div>*/}
-    //         {/*    </header>*/}
-    //         {/*</div>*/}
-    //         {/*<div className="col-md-6 right-pane"></div>*/}
-    //     </div>
-    // )
 }
