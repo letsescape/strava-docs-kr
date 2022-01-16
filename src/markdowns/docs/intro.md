@@ -1,12 +1,13 @@
 :::docs-panel{#left}
 
+asd::{id="asd"}
+
 # Strava API v3
-<!--rehype:style=color:pink;-->
 
 ## API and SDK Reference
 
 You can find general information about the API 
-[here](/docs)
+[here](/docs){ href=50 }
 All requests to the Strava API require
 [authentication](/docs/authentication)
 We have a few standalone pages with additional information about our

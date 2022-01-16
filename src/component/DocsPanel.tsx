@@ -4,7 +4,6 @@ interface DocsPanelType {
 }
 
 export default function DocsPanel({id, children}: DocsPanelType) {
-    console.log(typeof children);
     return (
         <div className={`col-md-6 ${id}-pane`}>
             {children}
