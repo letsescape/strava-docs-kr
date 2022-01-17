@@ -1,13 +1,11 @@
 :::docs-panel{#left}
 
-asd::{id="asd"}
-
 # Strava API v3
 
 ## API and SDK Reference
 
 You can find general information about the API 
-[here](/docs){ href=50 }
+[here](/docs)
 All requests to the Strava API require
 [authentication](/docs/authentication)
 We have a few standalone pages with additional information about our
