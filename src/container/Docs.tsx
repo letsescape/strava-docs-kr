@@ -10,7 +10,7 @@ import './docs.css';
 export default function Docs() {
     const [contents, setContents] = useState<string[]>([]);
     useEffect(() => {
-        axios(activitiesCreate)
+        axios(introDocs)
             .then(res => res.data)
             .then(data => setContents([data]));
     }, []);

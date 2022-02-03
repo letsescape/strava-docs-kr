@@ -5,6 +5,7 @@ import remarkDirectiveRehype from "remark-directive-rehype";
 import rehypeAttr from "rehype-attr";
 import rehypeRaw from "rehype-raw";
 import DocsPanel from "./DocsPanel";
+import DocsHttpMethod from "./DocsHttpMethod";
 
 interface DocsPanelType {
     content: string;
@@ -25,7 +26,8 @@ export default function DocsRow({content}: DocsPanelType) {
                 [rehypeAttr, { properties: 'attr' }]
             ]}
             components={{
-                'docs-panel': DocsPanel
+                'docs-panel': DocsPanel,
+                'docs-http-method': DocsHttpMethod
             }}
         />
     )

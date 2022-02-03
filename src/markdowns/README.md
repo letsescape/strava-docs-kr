@@ -26,12 +26,29 @@
 | -------- | ----- | ---------- |   
 | # or id  | left or right | true |
 | target   | link or anchor | false |
+
 > How to use   
 > ```markdown
 > :::docs-panel{#id target=link}
+>   // Add content
+> :::
 > ```
 
 <br>
+
+`docs-http-method`
+
+| property | value | isRequired |   
+| -------- | ----- | ---------- |   
+| method  | http method (ex: get) | true |
+| url   | link (ex: /asd) | true |
+
+> How to use
+> ```markdown
+> :docs-http-method{method=post url=/activities}
+> ```
+> ![http-method-image](../images/docs_http_method.png)
+
 
 ## Add attribute in markdown
 
@@ -52,4 +69,3 @@
 
 > Reference
 > https://github.com/jaywcjlove/rehype-attr/blob/main/README.md
-
