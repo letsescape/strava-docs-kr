@@ -1,24 +1,25 @@
-
 ## Required in docs markdown
 `Left area`
 ``` markdown
-:::docs-panel{artributes}
+::::docs-panel{artributes}
 
     Add contents
 
-:::
+::::
 ```
 
 `Right area`
 ``` markdown
-:::docs-panel{artributes}
+::::docs-panel{artributes}
 
     Add contents
     
-:::
+::::
 ```
 
 <br>
+
+## Docs components
 
 `docs-panel attributes`
 
@@ -29,9 +30,9 @@
 
 > How to use   
 > ```markdown
-> :::docs-panel{#id target=link}
+> ::::docs-panel{#id target=link}
 >   // Add content
-> :::
+> ::::
 > ```
 
 <br>
@@ -49,6 +50,33 @@
 > ```
 > ![http-method-image](../images/docs_http_method.png)
 
+<br>
+
+`docs-table & docs-table-row`
+
+| property | value | isRequired |   
+| -------- | ----- | ---------- |   
+| name | string value | true |
+| requiredText | string required text | false |
+| description | string description | true |
+
+> How to use
+> ```markdown
+> :::docs-table
+>   :docs-table-row{
+>     name="name"
+>     requiredText="requiredText"
+>     description="The name of the activity."
+>   }
+> 
+>   :docs-table-row{
+>     name="name"
+>     requiredText="requiredText"
+>     description="The name of the activity."
+>   }
+> :::
+> ```
+> ![img.png](../images/docs_table.png)
 
 ## Add attribute in markdown
 
@@ -69,3 +97,5 @@
 
 > Reference
 > https://github.com/jaywcjlove/rehype-attr/blob/main/README.md
+
+<br>
