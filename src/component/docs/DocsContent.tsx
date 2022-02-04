@@ -1,11 +1,11 @@
-import DocsRow from "./DocsRow";
+import DocsRender from "./DocsRender";
 
 export default function DocsContent({contents}: {contents: string[]}) {
     return (
         <div id="content">
             <div className="container-fluid">
                 { contents.map((content, index) => (
-                    <DocsRow
+                    <DocsRender
                         key={index}
                         content={content}
                     />
