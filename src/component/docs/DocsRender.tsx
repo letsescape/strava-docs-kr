@@ -4,7 +4,6 @@ import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
 import rehypeAttr from "rehype-attr";
 import rehypeRaw from "rehype-raw";
-import remarkRehype from "remark-rehype";
 import DocsPanel from "./DocsPanel";
 import DocsHttpMethod from "./DocsHttpMethod";
 import DocsTable from "./DocsTable";
