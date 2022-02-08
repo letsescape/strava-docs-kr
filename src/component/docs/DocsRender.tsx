@@ -9,7 +9,7 @@ import DocsHttpMethod from "./DocsHttpMethod";
 import DocsTable from "./DocsTable";
 import DocsTableRow from "./DocsTableRow";
 
-interface DocsPanelType {
+type DocsPanelType = {
     content: string;
 }
 
@@ -37,7 +37,7 @@ const REHYPE_PLUGINS = [
     [rehypeAttr, { properties: 'attr' }]
 ];
 
-interface pType {
+type pType = {
     children: any[];
 }
 

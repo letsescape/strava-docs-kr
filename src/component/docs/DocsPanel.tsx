@@ -1,4 +1,4 @@
-interface DocsPanelType {
+type DocsPanelType = {
     id: string;
     children: string;
     target?: string;

@@ -1,4 +1,4 @@
-interface DocsHttpMethodType {
+type DocsHttpMethodType = {
     method: string;
     url: string;
 }

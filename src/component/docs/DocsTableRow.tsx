@@ -1,4 +1,4 @@
-interface DocsTableRowType {
+type DocsTableRowType = {
     name: string;
     requiredText?: string;
     description: string;

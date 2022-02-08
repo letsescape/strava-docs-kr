@@ -1,4 +1,4 @@
-interface DocsTableType {
+type DocsTableType = {
     children: string;
 }
 
