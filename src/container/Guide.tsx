@@ -1,5 +1,6 @@
 import guideImg from "../images/guide";
 
+// TODO:
 export default function Guide() {
     return (
         <main className="container">
