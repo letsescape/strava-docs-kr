@@ -91,8 +91,8 @@ export default function Guide() {
                         </li>
                     </ol>
                     <p>
-                        <img src={guideImg.img1} className="p-3"/>
-                        <img src={guideImg.img2} className="p-3"/>
+                        <img src={guideImg.img1} className="p-3" alt="" />
+                        <img src={guideImg.img2} className="p-3" alt="" />
                         <br/>
                     </p>
                     <hr className="pt-4"/>
@@ -133,7 +133,7 @@ export default function Guide() {
                                 If you are using <a href="https://www.getpostman.com">Postman</a>, it will look like
                                 this:
                                 <br/>
-                                <img src={guideImg.img3} className="p-4"/>
+                                <img src={guideImg.img3} className="p-4" alt=""/>
                             </p>
                         </li>
                     </ol>
@@ -152,7 +152,7 @@ export default function Guide() {
                         When OAuth is initiated, the athlete is prompted by the application to log in to the Strava
                         website and give consent to the requesting application. This is what your athlete will see:
                     </p>
-                    <p><img src={guideImg.img4} className="pt-4"/></p>
+                    <p><img src={guideImg.img4} className="pt-4" alt=""/></p>
                     <p>After the athlete accepts or rejects the authorization request, Strava redirects the athlete to a
                         URL specified by the application. If the athlete authorized the application, the URL query
                         string will include an authorization code and the scope accepted by the athlete. Please check to
@@ -160,7 +160,7 @@ export default function Guide() {
                         authentication process by exchanging the authorization code for a refresh token and short-lived
                         access token.</p>
                     <p>Confused? Here is a Graph:</p>
-                    <p><img src={guideImg.img5} className="pt-4"/></p>
+                    <p><img src={guideImg.img5} className="pt-4" alt=""/></p>
                     <p><strong>For demonstration purposes only, here is how to reproduce the graph above with
                         cURL:</strong></p>
                     <ol>
@@ -177,7 +177,7 @@ export default function Guide() {
                         <li>Hit enter</li>
                         <li>
                             When you see the authorization page, click “Authorize” (step 3a from the graph)
-                            <img src={guideImg.img6} className="p-4"/>
+                            <img src={guideImg.img6} className="p-4" alt=""/>
                         </li>
                         <li>After you click “Authorize,” you should see something like, “this site can’t be reached”
                         </li>
@@ -185,7 +185,7 @@ export default function Guide() {
                         <li>
                             The URL will show the authorization code and scope accepted by the athlete (step 5 from the
                             graph)
-                            <img src={guideImg.img7} className="p-4"/>
+                            <img src={guideImg.img7} className="p-4" alt=""/>
                         </li>
                         <li>Copy the authorization code</li>
                         <li>
@@ -209,7 +209,7 @@ export default function Guide() {
                     <p>If you are using <a href="https://www.getpostman.com">Postman</a>, here is a sample request:</p>
                     <p>
 
-                        <img src={guideImg.img8} className="p-4"/>
+                        <img src={guideImg.img8} className="p-4" alt=""/>
                         Sample response:
                     </p>
                     <pre><code>
@@ -251,7 +251,7 @@ export default function Guide() {
                             authorization scope you receive from your athletes. To use the Playground, you will have to
                             change your “Authorization Callback Domain” to developers.strava.com.
                             <br/>
-                            <img src={guideImg.img9} className="p-4"/>
+                            <img src={guideImg.img9} className="p-4" alt=""/>
                         </li>
                         <li>
                             Go to the Playground, <a
@@ -262,7 +262,7 @@ export default function Guide() {
                             You will use your Client ID and Client Secret from <a
                             href="https://www.strava.com/settings/api">https://www.strava.com/settings/api</a>.
                             <br/>
-                            <img src={guideImg.img10} className="p-4"/>
+                            <img src={guideImg.img10} className="p-4"alt=""/>
                         </li>
                     </ol>
                     <hr className="pt-4"/>
