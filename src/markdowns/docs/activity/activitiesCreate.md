@@ -22,7 +22,7 @@ description="The name of the activity."
 
 ::::docs-panel{#right}
 ## HTTPPie
-```
+``` shell
 $ http POST "https://www.strava.com/api/v3/activities" name='value' type='value' start_date_local='value' elapsed_time='value' description='value' distance='value' trainer='value' commute='value' hide_from_home='value' "Authorization: Bearer [[token]]"
 ```
 
