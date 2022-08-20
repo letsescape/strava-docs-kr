@@ -4,7 +4,9 @@ import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
 import rehypeAttr from "rehype-attr";
 import rehypeRaw from "rehype-raw";
+// @ts-ignore
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+// @ts-ignore
 import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import DocsPanel from "./DocsPanel";
 import DocsHttpMethod from "./DocsHttpMethod";
@@ -70,5 +72,5 @@ const DOCS_COMPONENTS = {
   'docs-panel': DocsPanel,
   'docs-http-method': DocsHttpMethod,
   'docs-table': DocsTable,
-  'docs-table-row': DocsTableRow
+  'docs-table-row': DocsTableRow,
 };
