@@ -78,6 +78,26 @@
 > ```
 > ![img.png](../images/docs_table.png)
 
+<br>
+
+`docs-tab`
+
+| property | value                                  | isRequired |   
+| -------- |----------------------------------------| ---------- |   
+| language  | programming lannguage (ex: javascript) | true |
+
+> How to use
+> ```markdown
+> :::docs-tab{language=javascript}
+>    write your code
+> :::
+> ```
+> `code example` <br>
+> ![http-method-image](../images/docs_tab_code.png) <br><br>
+> `render` <br>
+> ![http-method-image](../images/docs_tab.png)
+
+
 ## Add attribute in markdown
 
 `Example`
