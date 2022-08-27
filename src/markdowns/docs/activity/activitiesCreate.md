@@ -15,7 +15,7 @@ Creates a manual activity for an athlete, requires activity write scope.
   :docs-table-row{
     name="name"
     requiredText="required String, in form"
-    description="The name of the activity."
+    description="<a href='/asd'>The name of the activity.</a>"
   }
 :::
 ::::
