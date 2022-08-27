@@ -72,7 +72,7 @@
 >   :docs-table-row{
 >     name="name"
 >     requiredText="requiredText"
->     description="The name of the activity."
+>     description="<a href='/href'>The name of the activity.</a>"
 >   }
 > :::
 > ```
