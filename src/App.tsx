@@ -14,7 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Intro/>}/>
           <Route path="/docs/getting-started" element={<Guide/>}/>
-          <Route path="/docs/reference" element={<Docs/>}/>
+          <Route path="/docs" element={<Docs/>}/>
         </Routes>
       </div>
     </BrowserRouter>
