@@ -64,5 +64,5 @@ description="선수의 역대 수영 통계."
 
 ::::
 
-::::docs-panel{id=right }
+::::docs-panel{id=right}
 ::::
