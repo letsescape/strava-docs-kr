@@ -21,6 +21,7 @@ import polylineMap from './polylineMap.md';
 import powerZoneRanges from './powerZoneRanges.md';
 import route from './route.md';
 import split from './split.md';
+import sportType from './sportType.md';
 import streamSet from './streamSet.md';
 import summaryGear from './summaryGear.md';
 import summaryPRSegmentEffort from './summaryPRSegmentEffort.md';
@@ -78,6 +79,7 @@ const models = [
     powerZoneRanges,
     route,
     split,
+    sportType,
     streamSet,
     summaryGear,
     summaryPRSegmentEffort,
