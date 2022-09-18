@@ -12,17 +12,13 @@ body, p, a, div, th, td {
     text-shadow: none !important;
 }
 
-body {
-    min-width: 980px;
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
 hr, p {
     width: 100%
 }
 
+img {
+    max-width: 100%;
+}
 
 /* ------------------------------------------------------------------------------------------
  * Content
