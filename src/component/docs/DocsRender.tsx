@@ -12,6 +12,7 @@ import DocsPanel from "./DocsPanel";
 import DocsHttpMethod from "./DocsHttpMethod";
 import DocsTable from "./DocsTable";
 import DocsTableRow from "./DocsTableRow";
+import DocsComment from "./DocsComment";
 
 interface Props {
   content: string;
@@ -73,4 +74,5 @@ const DOCS_COMPONENTS = {
   'docs-http-method': DocsHttpMethod,
   'docs-table': DocsTable,
   'docs-table-row': DocsTableRow,
+  'docs-comment': DocsComment,
 };
