@@ -98,6 +98,20 @@
 > ![http-method-image](../images/docs_tab.png)
 
 
+<br>
+
+`docs-comment`
+
+> How to use
+> ```markdown
+> :::docs-comment
+>    write anything
+> :::
+> ```
+> `render`
+> nothing
+
+
 ## Add attribute in markdown
 
 `Example`
