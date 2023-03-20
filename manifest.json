@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "스트라바 개발자 센터",
+  "name": "스트라바 개발자 센터 - 한국어 메뉴얼",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
