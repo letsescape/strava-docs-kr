@@ -1,6 +1,6 @@
 ::::docs-panel{id=left target=#api-models-PowerStream}
 
-### MovingStream
+### PowerStream
 
 :::docs-table
 :docs-table-row{
