@@ -21,7 +21,7 @@ description="스트림이 다운샘플링된 경우에 사용된 기본 시리�
 :docs-table-row{
 name="data"
 requiredText="LatLng"
-description="이 스트림의 위도/경도 값 시퀀스"
+description="이 스트림의 이동 값 시퀀스(부울 값)"
 }
 :::
 
