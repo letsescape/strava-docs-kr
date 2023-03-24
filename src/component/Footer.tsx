@@ -38,7 +38,7 @@ const FOOTER_LIST_LINKS_1 = [
     {
         href: 'https://developers.strava.com/guidelines',
         text: '가이드라인',
-        isRoute: true
+        isRoute: false
     }
 ];
 
