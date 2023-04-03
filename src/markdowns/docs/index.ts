@@ -8,6 +8,7 @@ import segmentEffort from "./segmentEffort";
 import segment from "./segment";
 import stream from "./stream";
 import upload from "./upload";
+import models from "./models";
 
 const docs = [
   intro,
@@ -19,7 +20,8 @@ const docs = [
   ...segmentEffort,
   ...segment,
   ...stream,
-  ...upload
+  ...upload,
+  ...models
 ];
 
 export default docs;

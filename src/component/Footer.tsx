@@ -27,42 +27,42 @@ export default function Footer() {
     );
 }
 
-const FOOTER_TITLE_1 = 'Agreement & Brand Guidelines';
-const FOOTER_DESCRIPTION_1 = `To use the Strava API, you need to comply with the Strava API Agreement and our Brand Guidelines. Mandatory logos, linking, and attribution rules can also be found in the guidelines.`;
+const FOOTER_TITLE_1 = '약관 & 가이드라인';
+const FOOTER_DESCRIPTION_1 = `스트라바 API를 사용하려면 스트라바 API 약관과 가이드라인을 준수해야 합니다. 로고, 링크 및 인가 규칙은 가이드라인에서 찾을 수도 있습니다.`;
 const FOOTER_LIST_LINKS_1 = [
     {
         href: 'https://www.strava.com/legal/api',
-        text: 'Strava API Agreement',
+        text: 'API 약관',
         isRoute: false
     },
     {
-        href: '/guidelines',
-        text: 'Strava Brand Guidelines',
-        isRoute: true
+        href: 'https://developers.strava.com/guidelines',
+        text: '가이드라인',
+        isRoute: false
     }
 ];
 
-const FOOTER_TITLE_2 = 'Strava Engineering';
-const FOOTER_DESCRIPTION_2 = `Learn more about the Strava Engineering Team and all the cool things we're working on.`;
+const FOOTER_TITLE_2 = '스트라바 엔지니어링';
+const FOOTER_DESCRIPTION_2 = `스트라바 엔지니어링 팀과 우리가 작업하고 있는 것들에 대해 알아보세요.`;
 const FOOTER_LIST_LINKS_2 = [
     {
         href: 'https://medium.com/strava-engineering',
-        text: 'Strava Engineering Blog',
+        text: '기술 블로그',
         isRoute: false
     },
     {
         href: 'https://boards.greenhouse.io/strava',
-        text: 'Careers at Strava',
+        text: '채용',
         isRoute: false
     }
 ];
 
-const FOOTER_TITLE_3 = 'Mailing List';
-const FOOTER_DESCRIPTION_3 = `Join the Strava API discussion group to ask questions and hear from other API developers. Remember, <b>never</b> share access tokens, refresh tokens, authorization codes, or your client secret in a public forum.`;
+const FOOTER_TITLE_3 = '개발자 커뮤니티';
+const FOOTER_DESCRIPTION_3 = `다른 개발자들의 소식을 듣기 위해 스트라바 개발자 커뮤니티에 가입하세요. 기억하세요, 토큰이나 키를 공개 포럼에서 공유하지 마세요.`;
 const FOOTER_LIST_LINKS_3 = [
     {
-        href: 'https://groups.google.com/forum/#!forum/strava-api',
-        text: 'Developer Group',
+        href: 'https://communityhub.strava.com/t5/developers/ct-p/developers',
+        text: '개발자 커뮤니티 가입',
         isRoute: false
     }
 ];
