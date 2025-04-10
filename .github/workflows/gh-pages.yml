@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - main
-      - STRAVA-6
 
 jobs:
   # Build job
