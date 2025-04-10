@@ -10,7 +10,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/react-syntax-highlighter": "^15.5.4",
-    "axios": "^0.27.2",
+    "axios": "^0.30.0",
     "html-element-attributes": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
