@@ -9,15 +9,17 @@ import img8 from './getting-started-8.png';
 import img9 from './getting-started-9.png';
 import img10 from './getting-started-10.png';
 
-export default {
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10
+const images = {
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10
 };
+
+export default images;

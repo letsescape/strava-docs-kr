@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "strava-docs-kr",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -9,13 +9,15 @@
     "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "axios": "^0.27.2",
+    "@types/react-syntax-highlighter": "^15.5.4",
+    "axios": "^0.30.0",
     "html-element-attributes": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-tabs": "^5.1.0",
     "rehype-attr": "^2.0.8",
     "rehype-raw": "^6.1.1",
     "remark-directive": "^2.0.1",
@@ -28,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && cp build/index.html build/404.html && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +54,9 @@
   "devDependencies": {
     "@types/node": "^18.6.1",
     "@types/webpack-env": "^1.17.0",
-    "mini-css-extract-plugin": "^2.6.1"
-  }
+    "gh-pages": "^5.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "react-scripts": "^5.0.1"
+  },
+  "homepage": "https://developers.stravakr.com"
 }

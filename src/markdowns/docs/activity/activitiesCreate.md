@@ -1,32 +1,94 @@
 ::::docs-panel{id=left target=#api-Activities-createActivity}
-### Create an Activity (createActivity)
-Creates a manual activity for an athlete, requires activity write scope.
+
+### 활동 만들기(createActivity)
+
+운동선수를 위한 수동 활동을 만들고 활동 쓰기 범위가 필요합니다.
 
 :docs-http-method{method=post url=/activities}
 
 #### Parameters
+
 :::docs-table
 :docs-table-row{
 name="name"
 requiredText="required String, in form"
-description="The name of the activity."
+description="활동의 이름입니다."
 }
 
 :docs-table-row{
-name="name"
+name="type"
+requiredText="String, in form"
+description="활동 유형. 예 - 달리기, 타기 등"
+}
+
+:docs-table-row{
+name="sport_type"
 requiredText="required String, in form"
-description="The name of the activity."
+description="스포츠 활동 유형. 예 - Run, MountainBikeRide, Ride 등"
+}
+
+:docs-table-row{
+name="start_date_local"
+requiredText="required Date, in form"
+description="ISO 8601 형식의 날짜 시간."
+}
+
+:docs-table-row{
+name="elapsed_time"
+requiredText="required Integer, in form"
+description="몇 초 안에."
+}
+
+:docs-table-row{
+name="description"
+requiredText="String, in form"
+description="활동에 대한 설명입니다."
+}
+
+:docs-table-row{
+name="distance"
+requiredText="Float, in form"
+description="미터 단위."
+}
+
+:docs-table-row{
+name="trainer"
+requiredText="Integer, in form  "
+description="트레이너 활동으로 표시하려면 1로 설정합니다."
+}
+
+:docs-table-row{
+name="commute"
+requiredText="Integer, in form"
+description="통근으로 표시하려면 1로 설정합니다."
 }
 :::
+
+#### Responses
+
+:::docs-table
+
+:docs-table-row{
+name="HTTP code 201"
+description="활동의 자세한 표현입니다. <a href='/docs/reference/#api-models-DetailedActivity'>DetailsActivity</a> 의 인스턴스입니다 ."
+}
+:docs-table-row{
+name="HTTP code 4xx, 5xx"
+description="<a href='/docs/reference/#api-models-Fault'>오류</a> 의 원인을 설명하는 오류입니다 ."
+}
+
+:::
+
 ::::
 
 ::::docs-panel{#right}
-## HTTPPie
-```
+
+:::docs-tab{language=HTTPPie}
+
+``` shell
 $ http POST "https://www.strava.com/api/v3/activities" name='value' type='value' start_date_local='value' elapsed_time='value' description='value' distance='value' trainer='value' commute='value' hide_from_home='value' "Authorization: Bearer [[token]]"
 ```
 
-#### Sample Response
 ``` json
 {
   "id" : 12345678987654321,
@@ -206,4 +268,365 @@ $ http POST "https://www.strava.com/api/v3/activities" name='value' type='value'
 
 ```
 
+:::
+
+:::docs-tab{language=java}
+
+``` javascript
+import com.strava.api.v3.*;
+import com.strava.api.v3.auth.*;
+import com.strava.api.v3.model.*;
+import com.strava.api.v3.api.ActivitiesApi;
+
+import rx.Observable;
+
+public class ActivitiesApiExample {
+  public static void main(String... args) {
+    ApiClient client = new ApiClient(...);
+    ActivitiesApi api = client.createService(ActivitiesApi.class);
+
+    String name = name_example; // String | The name of the activity.
+    String sportType = sportType_example; // String | Sport type of activity. For example - Run, MountainBikeRide, Ride, etc.
+    Date startDateLocal = 2013-10-20T19:20:30+01:00; // Date | ISO 8601 formatted date time.
+    Integer elapsedTime = 56; // Integer | In seconds.
+    String type = type_example; // String | Type of activity. For example - Run, Ride etc.
+    String description = description_example; // String | Description of the activity.
+    Float distance = 3.4; // Float | In meters.
+    Integer trainer = 56; // Integer | Set to 1 to mark as a trainer activity.
+    Integer commute = 56; // Integer | Set to 1 to mark as commute.
+
+    Observable<DetailedActivity> result = apiInstance.createActivity(name, sportType, startDateLocal, elapsedTime, type, description, distance, trainer, commute);
+    result.subscribe(System.out::println, Throwable::printStackTrace);
+  }
+}
+```
+
+``` javascript
+{
+  "id" : 123456778928065,
+  "resource_state" : 3,
+  "external_id" : null,
+  "upload_id" : null,
+  "athlete" : {
+    "id" : 12343545645788,
+    "resource_state" : 1
+  },
+  "name" : "Chill Day",
+  "distance" : 0,
+  "moving_time" : 18373,
+  "elapsed_time" : 18373,
+  "total_elevation_gain" : 0,
+  "type" : "Ride",
+  "sport_type" : "MountainBikeRide",
+  "start_date" : "2018-02-20T18:02:13Z",
+  "start_date_local" : "2018-02-20T10:02:13Z",
+  "timezone" : "(GMT-08:00) America/Los_Angeles",
+  "utc_offset" : -28800,
+  "achievement_count" : 0,
+  "kudos_count" : 0,
+  "comment_count" : 0,
+  "athlete_count" : 1,
+  "photo_count" : 0,
+  "map" : {
+    "id" : "a12345678908766",
+    "polyline" : null,
+    "resource_state" : 3
+  },
+  "trainer" : false,
+  "commute" : false,
+  "manual" : true,
+  "private" : false,
+  "flagged" : false,
+  "gear_id" : "b453542543",
+  "from_accepted_tag" : null,
+  "average_speed" : 0,
+  "max_speed" : 0,
+  "device_watts" : false,
+  "has_heartrate" : false,
+  "pr_count" : 0,
+  "total_photo_count" : 0,
+  "has_kudoed" : false,
+  "workout_type" : null,
+  "description" : null,
+  "calories" : 0,
+  "segment_efforts" : [ ]
+}
+```
+
+:::
+
+:::docs-tab{language=Obj-C}
+
+``` c
+String *name = name_example; // The name of the activity.
+String *sportType = sportType_example; // Sport type of activity. For example - Run, MountainBikeRide, Ride, etc.
+Date *startDateLocal = 2013-10-20T19:20:30+01:00; // ISO 8601 formatted date time.
+Integer *elapsedTime = 56; // In seconds.
+String *type = type_example; // Type of activity. For example - Run, Ride etc. (optional)
+String *description = description_example; // Description of the activity. (optional)
+Float *distance = 3.4; // In meters. (optional)
+Integer *trainer = 56; // Set to 1 to mark as a trainer activity. (optional)
+Integer *commute = 56; // Set to 1 to mark as commute. (optional)
+
+STRVActivitiesApi *apiInstance = [[STRVActivitiesApi alloc] init];
+
+// Create an Activity
+[apiInstance createActivityWith:name
+    sportType:sportType
+    startDateLocal:startDateLocal
+    elapsedTime:elapsedTime
+    type:type
+    description:description
+    distance:distance
+    trainer:trainer
+    commute:commute
+    completionHandler: ^(STRVDetailedActivity output, NSError* error) {
+        if (output) {
+            NSLog(@"%@", output);
+        }
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+    }];
+```
+
+``` javascript
+{
+  "id" : 123456778928065,
+  "resource_state" : 3,
+  "external_id" : null,
+  "upload_id" : null,
+  "athlete" : {
+    "id" : 12343545645788,
+    "resource_state" : 1
+  },
+  "name" : "Chill Day",
+  "distance" : 0,
+  "moving_time" : 18373,
+  "elapsed_time" : 18373,
+  "total_elevation_gain" : 0,
+  "type" : "Ride",
+  "sport_type" : "MountainBikeRide",
+  "start_date" : "2018-02-20T18:02:13Z",
+  "start_date_local" : "2018-02-20T10:02:13Z",
+  "timezone" : "(GMT-08:00) America/Los_Angeles",
+  "utc_offset" : -28800,
+  "achievement_count" : 0,
+  "kudos_count" : 0,
+  "comment_count" : 0,
+  "athlete_count" : 1,
+  "photo_count" : 0,
+  "map" : {
+    "id" : "a12345678908766",
+    "polyline" : null,
+    "resource_state" : 3
+  },
+  "trainer" : false,
+  "commute" : false,
+  "manual" : true,
+  "private" : false,
+  "flagged" : false,
+  "gear_id" : "b453542543",
+  "from_accepted_tag" : null,
+  "average_speed" : 0,
+  "max_speed" : 0,
+  "device_watts" : false,
+  "has_heartrate" : false,
+  "pr_count" : 0,
+  "total_photo_count" : 0,
+  "has_kudoed" : false,
+  "workout_type" : null,
+  "description" : null,
+  "calories" : 0,
+  "segment_efforts" : [ ]
+}
+```
+
+:::
+
+:::docs-tab{language=C#}
+
+``` c#
+using System;
+using System.Diagnostics;
+using com.strava.api.v3.Api;
+using com.strava.api.v3.Client;
+using com.strava.api.v3.Model;
+
+namespace Example
+{
+    public class createActivityExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: strava_oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ActivitiesApi();
+            var name = name_example;  // String | The name of the activity.
+            var sportType = sportType_example;  // String | Sport type of activity. For example - Run, MountainBikeRide, Ride, etc.
+            var startDateLocal = 2013-10-20T19:20:30+01:00;  // Date | ISO 8601 formatted date time.
+            var elapsedTime = 56;  // Integer | In seconds.
+            var type = type_example;  // String | Type of activity. For example - Run, Ride etc. (optional) 
+            var description = description_example;  // String | Description of the activity. (optional) 
+            var distance = 3.4;  // Float | In meters. (optional) 
+            var trainer = 56;  // Integer | Set to 1 to mark as a trainer activity. (optional) 
+            var commute = 56;  // Integer | Set to 1 to mark as commute. (optional) 
+
+            try
+            {
+                // Create an Activity
+                DetailedActivity result = apiInstance.createActivity(name, sportType, startDateLocal, elapsedTime, type, description, distance, trainer, commute);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ActivitiesApi.createActivity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+``` c#
+{
+  "id" : 123456778928065,
+  "resource_state" : 3,
+  "external_id" : null,
+  "upload_id" : null,
+  "athlete" : {
+    "id" : 12343545645788,
+    "resource_state" : 1
+  },
+  "name" : "Chill Day",
+  "distance" : 0,
+  "moving_time" : 18373,
+  "elapsed_time" : 18373,
+  "total_elevation_gain" : 0,
+  "type" : "Ride",
+  "sport_type" : "MountainBikeRide",
+  "start_date" : "2018-02-20T18:02:13Z",
+  "start_date_local" : "2018-02-20T10:02:13Z",
+  "timezone" : "(GMT-08:00) America/Los_Angeles",
+  "utc_offset" : -28800,
+  "achievement_count" : 0,
+  "kudos_count" : 0,
+  "comment_count" : 0,
+  "athlete_count" : 1,
+  "photo_count" : 0,
+  "map" : {
+    "id" : "a12345678908766",
+    "polyline" : null,
+    "resource_state" : 3
+  },
+  "trainer" : false,
+  "commute" : false,
+  "manual" : true,
+  "private" : false,
+  "flagged" : false,
+  "gear_id" : "b453542543",
+  "from_accepted_tag" : null,
+  "average_speed" : 0,
+  "max_speed" : 0,
+  "device_watts" : false,
+  "has_heartrate" : false,
+  "pr_count" : 0,
+  "total_photo_count" : 0,
+  "has_kudoed" : false,
+  "workout_type" : null,
+  "description" : null,
+  "calories" : 0,
+  "segment_efforts" : [ ]
+}
+```
+
+:::
+
+:::docs-tab{language=Python}
+
+```python
+
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: strava_oauth
+swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = swagger_client.ActivitiesApi()
+name = name_example # String | The name of the activity.
+sportType = sportType_example # String | Sport type of activity. For example - Run, MountainBikeRide, Ride, etc.
+startDateLocal = 2013-10-20T19:20:30+01:00 # Date | ISO 8601 formatted date time.
+elapsedTime = 56 # Integer | In seconds.
+type = type_example # String | Type of activity. For example - Run, Ride etc. (optional)
+description = description_example # String | Description of the activity. (optional)
+distance = 3.4 # Float | In meters. (optional)
+trainer = 56 # Integer | Set to 1 to mark as a trainer activity. (optional)
+commute = 56 # Integer | Set to 1 to mark as commute. (optional)
+
+try: 
+    # Create an Activity
+    api_response = api_instance.createActivity(name, sportType, startDateLocal, elapsedTime, type=type, description=description, distance=distance, trainer=trainer, commute=commute)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ActivitiesApi->createActivity: %s\n" % e)
+```
+
+``` python
+{
+  "id" : 123456778928065,
+  "resource_state" : 3,
+  "external_id" : null,
+  "upload_id" : null,
+  "athlete" : {
+    "id" : 12343545645788,
+    "resource_state" : 1
+  },
+  "name" : "Chill Day",
+  "distance" : 0,
+  "moving_time" : 18373,
+  "elapsed_time" : 18373,
+  "total_elevation_gain" : 0,
+  "type" : "Ride",
+  "sport_type" : "MountainBikeRide",
+  "start_date" : "2018-02-20T18:02:13Z",
+  "start_date_local" : "2018-02-20T10:02:13Z",
+  "timezone" : "(GMT-08:00) America/Los_Angeles",
+  "utc_offset" : -28800,
+  "achievement_count" : 0,
+  "kudos_count" : 0,
+  "comment_count" : 0,
+  "athlete_count" : 1,
+  "photo_count" : 0,
+  "map" : {
+    "id" : "a12345678908766",
+    "polyline" : null,
+    "resource_state" : 3
+  },
+  "trainer" : false,
+  "commute" : false,
+  "manual" : true,
+  "private" : false,
+  "flagged" : false,
+  "gear_id" : "b453542543",
+  "from_accepted_tag" : null,
+  "average_speed" : 0,
+  "max_speed" : 0,
+  "device_watts" : false,
+  "has_heartrate" : false,
+  "pr_count" : 0,
+  "total_photo_count" : 0,
+  "has_kudoed" : false,
+  "workout_type" : null,
+  "description" : null,
+  "calories" : 0,
+  "segment_efforts" : [ ]
+}
+```
+
+:::
 ::::
